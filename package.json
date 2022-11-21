@@ -1,10 +1,10 @@
 {
-    "name": "personal-website-react",
+    "name": "weather-web",
     "version": "0.2.0",
-    "homepage": "https://jolienhoop.com",
-    "description": "This is a clean customizable portfolio template for developers.",
-    "repository": "https://github.com/JoHoop/personal-website-react",
-    "author": "Jo Lienhoop <hey@jolienhoop.com>",
+    "homepage": "https://weather-web.tk",
+    "description": "This is a simple weather webpage build with react.",
+    "repository": "https://github.com/TEDDY6969/weather/",
+    "author": "TEDDY6969",
     "license": "MIT",
     "dependencies": {
         "@material-ui/core": "^4.11.0",
