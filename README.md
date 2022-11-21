@@ -48,9 +48,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://media.discordapp.net/attachments/893542491016527973/1044196737818054686/Screenshot_2022-11-21-15-54-09-53.png)
 
-There are many websites on GitHub claiming to be the best in catagory of weather app and this project is one of them XD but i claim it to be working as fine as this [music-website](https://teddy6969.github.io/Music-Website/).
+There are many websites on GitHub claiming to be the best in catagory of weather app and this project is one of them XD but i claim it to be working as fine as this [weather-web](https://weather-web.tk/).
 
 Here's why:
 * This webpage site full of aesthetic outlook
