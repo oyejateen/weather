@@ -1,12 +1,8 @@
 import React from "react";
-import {useState,useEffect} from "react";
-import { Typography, Container } from "@material-ui/core";
-import axios from "axios";
+import {useState, useEffect} from "react";
+import { Link, Typography, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { TextDecrypt } from "./TextDecrypt";
-import Resume from "../../settings/config.json";
-import { FirstName } from "../../utils/getName";
-
+import { TextDecrypt } from "./TextDecrypt.js";
 const useStyles = makeStyles((theme) => ({
     search: {
     display: "flex",
@@ -56,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 export const Content = () => {
     const classes = useStyles();
 
-    const [ip, setIP] = useState('.');
+    const [ip, setIP] = useState('delhi');
   const myapi = ["b190a0605344cc4f3af08d0dd473dd25", "bcc8472740ca9855a9620a0a3d6168b4", "cac3427ab24f44b470779f0a8efa25e3", "e84adc806b12a31f9bc35657d74a931e", "dd151471f1a82230bb263903e418bf7b", "7d44fca2d125a7eb98dcbcf42f38e757", "96fd9bf8f54700190b83b28c5019174b"]
 
     const api = myapi[Math.floor(Math.random()*myapi.length)];
@@ -68,37 +64,42 @@ export const Content = () => {
   //"dd151471f1a82230bb263903e418bf7b",
   //"7d44fca2d125a7eb98dcbcf42f38e757",
   //"96fd9bf8f54700190b83b28c5019174b"
-  let apiKey = 'f8e0b361e8f4405c94613ab534959fdf';   const getData = async () => {
-    const res = await axios.get('https://api.ipgeolocation.io/ipgeo?apiKey='+ apiKey)
-    console.log(res.data);
-    setIP(res.data.city)
-    };
    
 const [weather, setWeather] = useState('.');
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ip}&units=metric&appid=${api}`)
-  .then(res => res.json())
-  .then((data) => {
-    console.log(data)
-   setWeather({
-     descp: data.weather[0].description,
-     icon: data.weather[0].icon,
-            temp: data.main.temp,
-            city: data.name,
-            humidity: data.main.humidity,
-            press: data.main.pressure,
-            wind: data.wind.speed,
+  let url = ("https://api.openweathermap.org/data/2.5/weather?q=" +
+          ip +
+          "&units=metric&appid=" + api);
+  async function getUser() {
+  try {
+    const response = await fetch(url);
 
-   })
-    
-     console.log(data.main)
-     console.log(data.name)
+    if (!response.ok) {
+      throw new Error(`Error! status: ${response.status}`);
+    }
+
+    const res = await response.json();
+    let {temp, feels_like} = res.main;
+    console.log(res.id)
+    const { humidity } = res.main;
+				setWeather({
+					temp,
+					feels_like,
+          humidity,
+          id: res.id,
+          speed: res.wind.speed,
+          city: res.name,
+					name: `${res.name}`,
+				})
+  } catch (error) {
+    console.log(error);
+  }
+  }    
+
      console.log(weather)
      console.log(weather.temp)
      console.log(weather.humidity)
-     console.log(weather.press)
-     console.log(weather.icon)
-                  })
-  .catch((error) => console.log(error));
+     console.log(weather.speed)
+                  
 
     
 
@@ -111,41 +112,63 @@ const [weather, setWeather] = useState('.');
 useEffect( () => {
   
                        
-    
-    getData()
+    getUser()
 
-  }, []) // when weather changes, sets 2) ---> prolly fires this effect block again
+
+  }, [weather]) // when weather changes, sets 2) ---> prolly fires this effect block again
 // ifninite loop
 
 
-let icon = weather.icon;
-let decimal = Math.trunc(weather.wind);
-     console.log(decimal)
+let id = weather.id;
+let decimal = Math.trunc(weather.speed);
+     console.log(decimal);
+  
 
-
+let info = ("https://openweathermap.org/city/" + id)
     return (
         <Container component="main" className={`${classes.main}`} maxWidth="sm">
           <div class="search">
       <input type="text" class="search-bar" placeholder="Search"
          onChange={e => setIP(e.target.value)}/>
+             <button onClick={getUser}><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em"
+          width="1.5em" >
+          <path
+            d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+          </path>
+        </svg></button>
+        
         
     </div>
          
-            <Typography variant="h2" component="h1" gutterBottom>
+            <Typography variant="h2" component="h3" gutterBottom>
                 <TextDecrypt text={`Weather in ${weather.city}`} />
             </Typography>
           
-            <Typography variant="h3" component="h2" gutterBottom>
+            <Typography variant="h3" component="h4" gutterBottom>
                 <TextDecrypt text={` ${weather.temp}°C`} />
               </Typography>
            
-            <Typography variant="h5" component="h5" gutterBottom>
+            <Typography variant="h7" component="h7" gutterBottom>
                 <TextDecrypt text={`Humidity: ${weather.humidity}%`} />
             </Typography>
-            <Typography variant="h5" component="h5" gutterBottom>
+            <Typography variant="h7" component="h7" gutterBottom>
                 <TextDecrypt text={`Wind: ${decimal}km/h`} />
             </Typography>
+          <Link 
+            color='inherit'
+      underline='none'
+      href={info}
+      target='_blank'
+      rel='noopener noreferrer'
+            >
+            
+<Typography variant="h9" component="h9" gutterBottom >
+                <TextDecrypt text={`Get More Info`} />
+            </Typography>
+</Link>
+
           
         </Container>
     );
+  
 };
