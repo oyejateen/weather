@@ -8,7 +8,7 @@
         "x_title": "Weather-web",
         "description": "Hey, This is a simple weather webpage",
         "summary": "It shows current weather",
-        "keywords": "website,weather,webpage,weatherapp,template,kit,jo,lienhoop,jolienhoop,computer,science,bremen,germany,react,github,linkedin,google,gitlab,telegram,material,design,ui,webapp",
+        "keywords": "website,weather,webpage,weatherapp,template,kit,react,github,linkedin,google,gitlab,telegram,material,design,ui,webapp",
         "url": "https://weather-web.tk",
         "location": {
             "address": "XX XXXXXstreet",
@@ -27,25 +27,25 @@
             },
             {
                 "network": "LinkedIn",
-                "username": "",
+                "username": "Jatin",
                 "url": "https://www.linkedin.com/in/jatin-undefined-740405252",
                 "x_icon": "fab fa-linkedin-in"
             },
             {
                 "network": "GitHub",
-                "username": "johoop",
+                "username": "TEDDY6969",
                 "url": "https://github.com/TEDDY6969",
                 "x_icon": "fab fa-github"
             },
             {
                 "network": "GitLab",
-                "username": "johoop",
+                "username": "TEDDY6969",
                 "url": "https://gitlab.com/",
                 "x_icon": "fab fa-gitlab"
             },
             {
                 "network": "Telegram",
-                "username": "jolienhoop",
+                "username": "Jatin's os",
                 "url": "https://t.me/+VIjiwIy8Gck4ODM1",
                 "x_icon": "fab fa-telegram-plane"
             },
