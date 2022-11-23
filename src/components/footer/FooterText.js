@@ -4,9 +4,8 @@ import { Typography, Link } from '@material-ui/core';
 import { TextDecrypt } from '../content/TextDecrypt';
 import Resume from '../../settings/config.json';
 import {
-  HeartIcon,
-  HeartIconFilled,
-  SponsorButton,
+  HeartIcon
+
 } from '../content/SponsorButton';
 
 const useStyles = makeStyles((theme) => ({
