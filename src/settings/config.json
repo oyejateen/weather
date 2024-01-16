@@ -8,7 +8,7 @@
         "x_title": "Weather-web",
         "description": "Hey, This is a simple weather webpage",
         "summary": "It shows current weather",
-        "keywords": "website,weather,webpage,weatherapp,template,kit,react,github,linkedin,google,gitlab,telegram,material,design,ui,webapp",
+        "keywords": "website,weather,webpage,weatherapp,template,kit,jo,lienhoop,jolienhoop,computer,science,bremen,germany,react,github,linkedin,google,gitlab,telegram,material,design,ui,webapp",
         "url": "https://weather-web.tk",
         "location": {
             "address": "XX XXXXXstreet",
@@ -20,12 +20,6 @@
         },
         "profiles": [
             {
-                "network": "Google",
-                "username": "Jatin_Sharma",
-                "url": "jatinshrimali24@gmail.com",
-                "x_icon": "fab fa-google"
-            },
-            {
                 "network": "LinkedIn",
                 "username": "Jatin",
                 "url": "https://www.linkedin.com/in/jatin-undefined-740405252",
@@ -33,14 +27,14 @@
             },
             {
                 "network": "GitHub",
-                "username": "TEDDY6969",
-                "url": "https://github.com/TEDDY6969",
+                "username": "oyejateen",
+                "url": "https://github.com/oyejateen",
                 "x_icon": "fab fa-github"
             },
             {
                 "network": "GitLab",
-                "username": "TEDDY6969",
-                "url": "https://gitlab.com/",
+                "username": "oyejateen",
+                "url": "https://gitlab.com/oyejateen",
                 "x_icon": "fab fa-gitlab"
             },
             {
@@ -50,8 +44,14 @@
                 "x_icon": "fab fa-telegram-plane"
             },
             {
+                "network": "Google",
+                "username": "oyejateen",
+                "url": "https://instagram/oyejateen",
+                "x_icon": "fab fa-instagram""
+            },
+            {
                 "network": "Discord",
-                "username": "❀SUNSHİNE❀#1359 ",
+                "username": "OYEJATIN",
                 "url": "https://discord.com/users/890146474158075915",
                 "x_icon": "fab fa-discord"
             }
