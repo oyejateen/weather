@@ -21,9 +21,9 @@
         "profiles": [
             {
                 "network": "Google",
-                "username": "oyejateen",
-                "url": "https://instagram/oyejateen",
-                "x_icon": "fab fa-instagram""
+                "username": "Jatin_Sharma",
+                "url": "jatinshrimali24@gmail.com",
+                "x_icon": "fab fa-google"
             },
             {
                 "network": "LinkedIn",
@@ -33,14 +33,14 @@
             },
             {
                 "network": "GitHub",
-                "username": "oyejateen",
-                "url": "https://github.com/oyejateen",
+                "username": "TEDDY6969",
+                "url": "https://github.com/TEDDY6969",
                 "x_icon": "fab fa-github"
             },
             {
                 "network": "GitLab",
-                "username": "oyejateen",
-                "url": "https://gitlab.com/oyejateen",
+                "username": "TEDDY6969",
+                "url": "https://gitlab.com/",
                 "x_icon": "fab fa-gitlab"
             },
             {
@@ -51,10 +51,11 @@
             },
             {
                 "network": "Discord",
-                "username": "OYEJATIN",
+                "username": "❀SUNSHİNE❀#1359 ",
                 "url": "https://discord.com/users/890146474158075915",
                 "x_icon": "fab fa-discord"
             }
         ]
     }
 }
+
